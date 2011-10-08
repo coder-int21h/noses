@@ -1,0 +1,18 @@
+<h1><?= $this->message ?></h1> 
+<?php if ($this->errorCode = '404') :?>
+<p>We couldn't find the page you were looking for. Please try our <a href="<?=$this->baseUrl()?>">Home page</a>.<p>
+<?php else: ?>
+<p>An unexpected error occurred. Please try our <a href="<?=$this->baseUrl()?>">Home page</a>.<p>
+<?php endif; ?>
+
+<? if ('development' == $this->env): ?>
+    <hr> 
+    <h3>Message:</h3>
+    <p><?= $this->exception->getMessage() ?></p> 
+
+    <h3>Stack trace:</h3> 
+    <pre><?= $this->exception->getTraceAsString() ?></pre> 
+
+    <h3>Request Parameters:</h3> 
+    <? Zend_Debug::dump($this->request->getParams()) ?> 
+<? endif ?>

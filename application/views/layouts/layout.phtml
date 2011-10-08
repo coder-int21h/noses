@@ -1,0 +1,18 @@
+<?= $this->doctype() ?> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <?= $this->headTitle('Zend_Form_Element_File Example');?>
+  <?= $this->headLink()->appendStylesheet($this->baseUrl().'/css/global.css') ?> 
+</head> 
+<body>
+<div id="header" >
+</div>
+<div id="content" >
+    <?= $this->layout()->content ?> 
+</div>
+<div id="footer">
+    Copyright &copy; <?php echo date('Y') == '2008' ? '2008' : '2008, '. date('Y');  ?> Rob Allen
+</div>
+</body>
+</html>
